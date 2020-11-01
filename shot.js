@@ -11,7 +11,7 @@ class Shot{
         World.add(world, this.con3);
     }
     attach(body){
-		this.con.bodyA=body;
+		this.con3.bodyA=body;
 	}
     
     fly(){
