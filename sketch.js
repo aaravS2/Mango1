@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const constraint = Matter.Constraint;
 
-var tree, stone,ground,groundb, launcherObject;
+var tree, stone,ground, launcherObject;
 var mango1,mango2,mango3,mango4,mango5,mango6,mango7;
 var boy,boyImg,boyShot;
 
@@ -25,8 +25,8 @@ function setup() {
 	boy.addImage(boyImg);
 	boy.scale = 0.1;
 	tree = new Tree(900,350,30,300);
-	groundb=Bodies.rectangle(600,600,2000,20,{isStatic:true})
-	ground = createSprite(600,600,2000,20);
+	
+	
 
 	mango1 = new Mango(900,250,18);
 	mango2 = new Mango(800,200,18);
@@ -38,7 +38,7 @@ function setup() {
 
 	stone = new Stone(150,550,15);
 	boyShot = new Shot(stone.body,{x:150,y:452});
-	
+	ground=new Re(675,600,1350,20)
   
 }
 
@@ -47,8 +47,7 @@ function draw() {
   rectMode(CENTER);
   
   Engine.update(engine);
-  ground.x=groundb.body.position.x
-  ground.y=groundb.body.position.y
+  
   tet();
   background("lightgray");
   tree.display();
@@ -60,7 +59,7 @@ function draw() {
   mango5.display();
   mango6.display();
   mango7.display();
-
+ground.display();
   stone.display();
   boyShot.display();
   detectCollision(stone,mango1);
