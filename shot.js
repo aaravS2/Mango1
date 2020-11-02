@@ -7,19 +7,19 @@ class Shot{
             length: 3
         }
         this.pointB = pointB;
-        this.con3 = Constraint.create(options);
-        World.add(world, this.con3);
+        this.rope=constraint.create(options);
+        World.add(world,this.rope);
     }
     attach(body){
-		this.con3.bodyA=body;
+		this.rope.bodyA=body;
 	}
     
     fly(){
-        this.con3.bodyA=null;
+        this.rope.bodyA=null;
     }
     display(){
-        if(this.con3.bodyA){
-        var pointA = this.con3.bodyA.position;
+        if(this.rope.bodyA){
+        var pointA = this.rope.bodyA.position;
         var pointB = this.pointB;
         strokeWeight(4);
         line(pointA.x, pointA.y, pointB.x, pointB.y);

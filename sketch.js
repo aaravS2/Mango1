@@ -2,7 +2,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-const Constraint = Matter.Constraint;
+const constraint = Matter.Constraint;
 
 var tree, stone,ground,groundb, launcherObject;
 var mango1,mango2,mango3,mango4,mango5,mango6,mango7;
@@ -91,7 +91,7 @@ function detectCollision(lstone,lmango){
 
 function keyPressed(){
 
-	if(keyCode === "space"){
+	if(keyCode ===32){
 		Matter.Body.setPosition(stone.body,{x:150,y:550})
 		boyShot.attach(stone.body);
 	}
