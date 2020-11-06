@@ -6,19 +6,20 @@ class Shot{
             stiffness: 0.03,
             length: 3
         }
-        this.pointB = pointB;
+        
         this.rope=constraint.create(options);
+
         World.add(world,this.rope);
     }
     attach(body){
-		this.rope.bodyA=body;
+		this.bodyA=body;
 	}
     
     fly(){
-        this.rope.bodyA=null;
+        this.bodyA=null;
     }
     display(){
-        if(this.rope.bodyA){
+        if(this.bodyA){
         var pointA = this.rope.bodyA.position;
         var pointB = this.pointB;
         strokeWeight(4);

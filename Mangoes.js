@@ -8,8 +8,9 @@ class Mango{
 		this.x=x;
 		this.y=y;
 		this.r=r;
+		this.body=Bodies.circle(x, y, r, options);
         this.image = loadImage("Plucking_mangoes/mango.png");
-		this.body=Bodies.circle(x, y, this.r, options);
+		
 		World.add(world, this.body);
 	}
 
@@ -21,7 +22,7 @@ class Mango{
 		rotate(this.body.angle)
 		fill(255,0,255)
 		imageMode(CENTER);
-		ellipseMode(CENTER);
+		//ellipseMode(CENTER);
 		image(this.image, 0,0,this.r*2, this.r*2)
 		pop()
  }

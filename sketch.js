@@ -24,7 +24,7 @@ function setup() {
 	boy = createSprite(200,500);
 	boy.addImage(boyImg);
 	boy.scale = 0.1;
-	tree = new Tree(900,350,30,300);
+	tree = new Tree(900,350);
 	
 	
 
@@ -73,7 +73,8 @@ ground.display();
  
 }
 function mouseDragged(){
-    Matter.Body.setPosition(stone.body,stone.body.position,{x:mouseX,y:mouseY});
+   stone.body.position.x=mouseX
+   stone.body.position.y=mouseY
 }
 
 function mouseReleased(){
