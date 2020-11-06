@@ -12,8 +12,8 @@ class Tree{
     }
 display(){
     imageMode(CENTER);
-    var pos1 = this.tree.position.x;
-    var pos2 = this.tree.position.y;
+    var pos1 = this.body.position.x;
+    var pos2 = this.body.position.y;
     image(this.image,pos1,pos2,200,600);
 }
 }
