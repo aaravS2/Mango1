@@ -8,8 +8,8 @@ class Stone{
         }
 		this.x=x;
 		this.y=y;
-		this.r=r;
-		this.body=Bodies.circle(x, y, this.r, options);
+		this.radius=r;
+		this.body=Bodies.circle(x, y, this.radius, options);
         this.image = loadImage("Plucking_mangoes/stone.png");
 		
 		World.add(world, this.body);
@@ -24,7 +24,7 @@ class Stone{
 		fill(255,0,255)
 		imageMode(CENTER);
 		ellipseMode(CENTER);
-		image(this.image, 0,0,this.r*2, this.r*2)
+		image(this.image, 0,0,this.radius*2, this.radius*2)
 		pop()
  }
 }
