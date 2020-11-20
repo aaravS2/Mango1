@@ -10,7 +10,7 @@ var boy,boyImg,boyShot;
 
 function preload()
 {
-	boyImg = loadImage("boy.png");
+	boyImg = loadImage("Plucking_mangoes/boy.png");
 }
 
 function setup() {
@@ -22,9 +22,9 @@ function setup() {
 
 	//Create the Bodies Here.
 	boy = createSprite(200,500);
-	boy.addImage(boyImg);
+	boy.addImage("boyImg",boyImg);
 	boy.scale = 0.1;
-	tree = new Tree(900,350);
+	tree = new Tree(1050,580);
 	
 	
 
@@ -39,7 +39,7 @@ function setup() {
 	stone = new Stone(150,550,15);
 	boyShot = new Shot(stone.body,{x:150,y:452});
 	ground=new Re(675,600,1350,20)
-  
+	Engine.run(engine);
 }
 
 
@@ -91,7 +91,7 @@ function detectCollision(lstone,lmango){
 
 function keyPressed(){
 
-	if(keyCode ===32){
+	if(keyCode===32){
 		Matter.Body.setPosition(stone.body,{x:150,y:550})
 		boyShot.attach(stone.body);
 	}
